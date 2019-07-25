@@ -56,3 +56,4 @@ next：
 > JWT是什么：JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息
 
 2. `jsonwebtoken`就可以实现token的生成与反向解密出用户数据
+[jsonwebtoken生成与解析token](https://www.jianshu.com/p/ed17e00c4484)

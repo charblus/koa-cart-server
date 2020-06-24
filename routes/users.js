@@ -13,6 +13,7 @@ router.post('/ll',async (ctx) => {
   ctx.body = ctx.request.body
 });
 router.post('/login', async (ctx, next) => {
+  console.log('tk', ctx.request.header.token)
   const userinfos = await user.findOne({
     username: ctx.request.body.username
   })
@@ -20,7 +21,7 @@ router.post('/login', async (ctx, next) => {
 
   if (compare) {
     ctx.body = {
-      code: 1,
+      code: 200,
       msg: '登录成功！',
       token: jsonwebtoken.sign({
         data: userinfos.username,
